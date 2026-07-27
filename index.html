@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil Xat</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  font-family:Arial, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1a1a2e);
+  background-size:400% 400%;
+  animation:bg 15s ease infinite;
+  position:relative;
+}
+
+@keyframes bg{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Partículas */
+.stars{
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.stars span{
+  position:absolute;
+  display:block;
+  width:3px;
+  height:3px;
+  background:white;
+  border-radius:50%;
+  animation:float 10s linear infinite;
+  opacity:.8;
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(100vh) scale(0);
+  }
+  100%{
+    transform:translateY(-10vh) scale(1);
+  }
+}
+
+/* Card principal */
+.profile{
+  position:relative;
+  width:320px;
+  padding:30px;
+  text-align:center;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:25px;
+  backdrop-filter:blur(15px);
+  box-shadow:0 0 25px rgba(0,0,0,.4);
+  z-index:2;
+}
+
+/* Foto */
+.avatar{
+  width:140px;
+  height:140px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  padding:5px;
+  background:linear-gradient(45deg,#00e5ff,#ff00ff,#00ff99);
+  animation:none;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  border:none;
+}
+
+@keyframes rotate{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+/* Nome */
+.name{
+  font-size:28px;
+  font-weight:bold;
+  color:#fff;
+  text-shadow:0 0 10px #00e5ff;
+  margin-bottom:10px;
+}
+
+/* Cidade */
+.city{
+  font-size:18px;
+  color:#ddd;
+  margin-bottom:20px;
+}
+
+/* Linha decorativa */
+.line{
+  width:80px;
+  height:3px;
+  margin:0 auto;
+  background:linear-gradient(90deg,#00e5ff,#ff00ff);
+  border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Partículas -->
+<div class="stars">
+  <span style="left:5%;animation-duration:8s;"></span>
+  <span style="left:15%;animation-duration:12s;"></span>
+  <span style="left:25%;animation-duration:10s;"></span>
+  <span style="left:35%;animation-duration:14s;"></span>
+  <span style="left:45%;animation-duration:9s;"></span>
+  <span style="left:55%;animation-duration:13s;"></span>
+  <span style="left:65%;animation-duration:11s;"></span>
+  <span style="left:75%;animation-duration:15s;"></span>
+  <span style="left:85%;animation-duration:10s;"></span>
+  <span style="left:95%;animation-duration:12s;"></span>
+</div>
+
+<!-- Card do perfil -->
+<div class="profile">
+
+  <div class="avatar">
+    <img src="Design sem nome.jpg" alt="Foto">
+  </div>
+
+  <div class="name">Renato Ferreira</div>
+
+  <div class="city"> Sorocaba - SP</div>
+
+  <div class="line"></div>
+
+</div>
+
+<!-- Player invisível -->
+<audio autoplay loop preload="auto" style="display:none;">
+    <source src="https://s31.aconvert.com/convert/p3r68-cdx67/ozaj6-cn90j.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+</audio>
+</body>
+</html>
